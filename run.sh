@@ -27,7 +27,7 @@ run_qemu () {
     -kernel "$KERNEL_FILE" \
     -dtb "$DTB_FILE" \
     -sd "$IMAGE_FILE" \
-    -append 'rw earlyprintk loglevel=8 console=ttyAMA0,115200 dwc_otg.lpm_enable=0 root=/dev/mmcblk0p2 rootdelay=1' \
+    -append 'rw earlyprintk loglevel=8 console=ttyAMA1,115200 dwc_otg.lpm_enable=0 root=/dev/mmcblk0p2 rootdelay=1' \
     -device usb-net,netdev=net0 \
     -netdev user,id=net0,hostfwd=tcp::2222-:22 \
     -device usb-mouse \
